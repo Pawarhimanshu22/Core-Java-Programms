@@ -4,17 +4,17 @@ class Calc implements Runnable {
     public void run() {
         System.out.println("Calculation Task Started");
 
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the 1st number");
-        int num1 = sc.nextInt();
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.println("Enter the 1st number");
+            int num1 = sc.nextInt();
 
-        System.out.println("Enter the 2nd Number");
-        int num2 = sc.nextInt();
+            System.out.println("Enter the 2nd Number");
+            int num2 = sc.nextInt();
 
-        int res = num1 + num2;
+            int res = num1 + num2;
 
-        System.out.println(res);
-
+            System.out.println(res);
+        }
         System.out.println("Calculation Task Ended");
         System.out.println("________________________________________");
 
